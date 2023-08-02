@@ -1,0 +1,22 @@
+[
+    {
+        "model": "Arch",
+        "Desc": "Cenderung bersifat memegang nilai-nilai tradisional dan akhlak yang tinggi, tetap berpandangan tradisional mengenai ambisi, karier, dan kepemimpinan."
+    },
+    {
+        "model": "Left Loop",
+        "Desc": "Cenderung bersifat serius dan mempunyai ingatan visual yang tinggi"
+    },
+    {
+        "model": "Right Loop",
+        "Desc": "Cenderung bersifat hati-hati, waspada, dan observatif. Tipe ini merupakan gabungan dari whorl dan loop"
+    },
+    {
+        "model": "Tented Arch",
+        "Desc": "Cenderung menunjukkan antusiasme dan gairah, impulsif, dan terlibat secara mendalam dengan segala sesuatu yang ditanganinya"
+    },
+    {
+        "model": "Whorl",
+        "Desc": "Cenderung bersifat jujur, kritis, perfeksionis, kompetitif, komunikatif, dan berkemauan keras."
+    }
+] 

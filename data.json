@@ -1,0 +1,22 @@
+[
+    {
+        "model": "Arch",
+        "Desc": "Cenderung memiliki pola pikir sistematis, reflektif, dan didasarkan pada tata nilai dan keyakinan kuat. Prioritas pada disiplin, konsistensi, dan efisiensi dalam berkomunikasi dan bertindak"
+    },
+    {
+        "model": "Left Loop",
+        "Desc": "Cenderung memiliki pola pikir kritis, suka mencari cara-cara baru, dan cenderung menciptakan solusi inovatif. Komunikasi unik, kreatif, dan suka mencoba hal-hal baru. Selalu mencari tantangan dan kesempatan untuk berinovasi. Tidak terikat oleh norma atau aturan yang ada"
+    },
+    {
+        "model": "Right Loop",
+        "Desc": "Cenderung bersifat mengambil keputusan berdasarkan emosi dan lingkungan sekitarnya. Gaya komunikasi adaptif, dipengaruhi suasana hati dan hubungan sosial. Responsif terhadap perubahan dan mudah terpengaruh lingkungan"
+    },
+    {
+        "model": "Tented Arch",
+        "Desc": "Cenderung bersifat mengambil keputusan berdasarkan dorongan emosional dan antusiasme tinggi. Keyakinan yang kuat terhadap nilai dan tata keyakinan yang diyakini. Kemampuan beradaptasi kuat, tetapi sensitif terhadap keyakinan baru yang didukung oleh perasaan emosional"
+    },
+    {
+        "model": "Whorl",
+        "Desc": "Cenderung memiliki pola pikir rasional dan objektif, didorong oleh keinginan kuat untuk aktualisasi diri. Mandiri, konsisten, dan berkomunikasi dengan gaya yang original. Tidak mudah terpengaruh oleh orang lain atau pandangan yang tidak sesuai dengan mereka"
+    }
+] 

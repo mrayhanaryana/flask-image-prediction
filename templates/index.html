@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deteksi Kepribadian Anak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .result-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Deteksi Kepribadian Anak</h1>
+        <div class="form-container">
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="file">Select an image:</label>
+                <input type="file" name="file" id="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+        <div id="result-container" class="result-container" style="display: none;">
+            <h2>Prediction Result:</h2>
+            <p id="prediction-result"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    var resultContainer = document.getElementById('result-container');
+                    var predictionResult = document.getElementById('prediction-result');
+                    console.log(data);
+                    var parsedData = data.prediction_result;
+                    // If "Message" key is present in the response, it means that the request has failed
+                    if (parsedData.Message) {
+                        // predictionResult.textContent = parsedData.Message;
+                        predictionResult.textContent = JSON.stringify(parsedData, null, 2);
+                        resultContainer.style.display = 'block';
+                        return;
+                    }
+                    else {
+                        // Stringify the data                
+                        predictionResult.textContent = JSON.stringify(parsedData, null, 2);
+                        // Use this is you want to print Desc only
+                        // predictionResult.textContent = parsedData.Desc;
+                        resultContainer.style.display = 'block';
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>
